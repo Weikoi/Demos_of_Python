@@ -6,9 +6,9 @@ import time
 
 
 def metric(fn):
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         start = time.time()
-        res = fn(*args)
+        res = fn(*args, **kwargs)
         time.sleep(1)  # 这里是故意延时一秒以显示装饰器效果。
         end = time.time()
         print('%s executed in %s s' % (fn.__name__, round(end - start, 3)))

@@ -6,9 +6,9 @@ import time
 
 
 def logging(fn):
-    def wrapper(*args, **kwgs):
+    def wrapper(*args, **kwargs):
         start = time.time()
-        res = fn(*args, **kwgs)
+        res = fn(*args, **kwargs)
         end = time.time()
 
         # 在本地打印log,记录函数的运行历史记录
